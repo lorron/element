@@ -212,5 +212,10 @@ MessageBox.close = () => {
   currentMsg = null;
 };
 
+// 增加获取对象实例的方法，便于对话框动态控制 byyh
+MessageBox.instance = () => {
+  return instance;
+};
+
 export default MessageBox;
 export { MessageBox };
