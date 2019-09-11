@@ -212,7 +212,7 @@ MessageBox.close = () => {
   currentMsg = null;
 };
 
-// å¢åŠ è·å–å¯¹è±¡å®ä¾‹çš„æ–¹æ³•ï¼Œä¾¿äºå¯¹è¯æ¡†åŠ¨æ€æ§åˆ¶ byyh
+// Ôö¼Ó»ñÈ¡¶ÔÏóÊµÀıµÄ·½·¨£¬±ãÓÚ¶Ô»°¿ò¶¯Ì¬¿ØÖÆ byyh
 MessageBox.instance = () => {
   return instance;
 };
