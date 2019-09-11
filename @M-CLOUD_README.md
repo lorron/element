@@ -23,11 +23,14 @@
 
 ### 定制 @m-cloud/element-ui
 - 注意：修改版本号有 package.json 和 src/index.js 
+- 【思路】:添加别名，将原 element-ui 重新指向
 - 修改 build/config.js 添加 alias '@m-cloud/element-ui': path.resolve(__dirname, '../')
 - 修改 build/config.js 替换 externals 路径 [@m-cloud/element-ui/lib]
-- 修改 src/** 目录所有引用路径 [@m-cloud/element-ui/lib]
+- 【思路】:src中源码会自动发布到lib中，项目中JS实际的实际引用路径，进行相应替换（index除外）。
+- 注意：仅修改 src/** 目录所有引用路径 [element-ui/] 为 [@m-cloud/element-ui/]，其他以别名方式调用的无需修改
+- git仓库不提交lib目录
 - 打包 yarn dist
-- 登录 npmjs 官网，创建 m-cloud 组织，让依赖库自动归类，详见：npm 发布 package
+- 首次发布，登录 npmjs 官网，创建 m-cloud 组织，让依赖库自动归类，详见：npm 发布 package
 - 发布 npm publish --access public 发布带@符号的公共包
 - 发包文件白名单设置package.json中的files属性。如：
 ```
