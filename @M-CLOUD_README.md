@@ -6,6 +6,19 @@
 - 2019.04.27 基于element-ui 2.8.2 定制 @m-cloud/element-ui 并发布至 npmjs
 
 
+## Fork 项目与原作者同步
+1. git clone fork的项目到本地
+2. 进入项目目录，增加源分支地址项目远程分支列表中
+   - git remote -v 查看
+   - git remote add [myName] [Source URL]
+3. fetch 源分支到本地
+   - git fetch [myName]
+4. 合并两个版本的代码
+   - git merge [myName]/master 或 git rebase [myName]/master
+5. 解决冲突，提交代码
+   - git push origin master
+
+
 ## 修改方法
 
 ### 定制 @m-cloud/element-ui
